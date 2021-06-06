@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <h3>House Age<h3>
+            <input id="first" name="house_age" type="number ">
+            <h3>Market Distance<h3>
+            <br><input id="second" name="market_distance" required="required">
+            <h3>Convenience Stores<h3>
+            <br><input id="third" name="no_of_conveniance_store" required="required">
+            <h3>Latitude<h3>
+            <br><input id="forth" name="lat" required="required">
+            <h3>Longitude<h3>
+            <br><input id="fifth" name="long" required="required">
+            </select>
+            <br><br><button id="sub" type="submit ">house price of unit area</button>
+        
+        </form>
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+</body>
+
+</html>
